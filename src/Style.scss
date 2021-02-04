@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.App {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  .App-header {
+    padding: 20px 0;
+    font-size: calc(10px + 2vmin);
+    background-color: azure;
+    color: black;
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .Nav {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  .App-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &[data-theme="dark"] {
+    .App-body {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &[data-theme="light"] {
+    .App-body {
+      background-color: white;
+      color: black;
+    }
+  }
+}
